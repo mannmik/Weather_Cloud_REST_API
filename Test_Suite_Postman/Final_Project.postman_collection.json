@@ -1,0 +1,1055 @@
+{
+	"info": {
+		"name": "Final_Project",
+		"_postman_id": "68718114-f2c3-96ce-3354-36f766fecad8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"//tests[\"myData is not empty\"] = myData.id !== null",
+							"",
+							"pm.environment.set(\"user_id\", myData.id);",
+							"pm.environment.set(\"user_email\", myData.email);",
+							"pm.environment.set(\"user_username\", myData.username);",
+							"pm.environment.set(\"user_watchlist\", myData.watchList);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"api returns ID\"] = myData.id === pm.environment.get(\"user_id\");",
+							"tests[\"api returns username\"] = pm.environment.get(\"user_username\") === \"test1\";",
+							"tests[\"api returns email\"] = pm.environment.get(\"user_email\") === \"test1@hotmail.com\";",
+							"tests[\"api returns a empty watchlist\"] = pm.environment.get(\"user_watchlist\").length === 0;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"test1\", \"email\": \"test1@hotmail.com\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user"
+					]
+				},
+				"description": "POST request to add a user"
+			},
+			"response": []
+		},
+		{
+			"name": "GET to check Add User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"//tests[\"myData is not empty\"] = myData.id !== null",
+							"",
+							"//pm.environment.set(\"user_id\", myData.id);",
+							"//pm.environment.set(\"user_email\", myData.email);",
+							"//pm.environment.set(\"user_username\", myData.username);",
+							"//pm.environment.set(\"user_watchlist\", myData.watchList);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"api returns matching ID\"] = myData.id === pm.environment.get(\"user_id\");",
+							"tests[\"api returns matching username\"] = myData.username === pm.environment.get(\"user_username\");",
+							"tests[\"api returns matching email\"] = myData.email === pm.environment.get(\"user_email\");",
+							"tests[\"api returns an empty watchlist\"] = myData.watchList.length === 0;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"test1\", \"email\": \"test1@hotmail.com\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/{{user_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"{{user_id}}"
+					]
+				},
+				"description": "GET request to double check our user we created in our original post request was actually added to the api."
+			},
+			"response": []
+		},
+		{
+			"name": "GET to check we return a list of user accounts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"//tests[\"myData is not empty\"] = myData.id !== null",
+							"",
+							"//pm.environment.set(\"user_id\", myData.id);",
+							"//pm.environment.set(\"user_email\", myData.email);",
+							"//pm.environment.set(\"user_username\", myData.username);",
+							"//pm.environment.set(\"user_watchlist\", myData.watchList);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"api returns list of user accounts\"] = myData.length > 2; //we start out with two authorized users",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"test1\", \"email\": \"test1@hotmail.com\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user"
+					]
+				},
+				"description": "GET request to list an entire list of users"
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH update a user's username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"tests[\"status code is 200 and Patch request was ok\"] = responseCode.code === 200;",
+							"tests[\"api returns matching ID\"] = myData.id === pm.environment.get(\"user_id\");",
+							"tests[\"api returns a new username\"] = myData.username !== pm.environment.get(\"user_username\");",
+							"tests[\"api returns matching email\"] = myData.email === pm.environment.get(\"user_email\");",
+							"tests[\"api returns an empty watchlist\"] = myData.watchList.length === 0;",
+							"",
+							"pm.environment.set(\"user_username\", myData.username);           //set our new username"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"patchTest\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/{{user_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"{{user_id}}"
+					]
+				},
+				"description": "Updates a user's username at the specified user id."
+			},
+			"response": []
+		},
+		{
+			"name": "GET to check PATCH",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"//tests[\"myData is not empty\"] = myData.id !== null",
+							"",
+							"//pm.environment.set(\"user_id\", myData.id);",
+							"//pm.environment.set(\"user_email\", myData.email);",
+							"//pm.environment.set(\"user_username\", myData.username);",
+							"//pm.environment.set(\"user_watchlist\", myData.watchList);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"api returns matching ID\"] = myData.id === pm.environment.get(\"user_id\");",
+							"tests[\"api returns matching username\"] = myData.username === \"patchTest\"",
+							"tests[\"api returns matching email\"] = myData.email === pm.environment.get(\"user_email\");",
+							"tests[\"api returns an empty watchlist\"] = myData.watchList.length === 0;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"test1\", \"email\": \"test1@hotmail.com\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/{{user_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"{{user_id}}"
+					]
+				},
+				"description": "GET request to double check our patch to a user"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE the user we created with the user_id from our first post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"status code is 200 and delete request was ok\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/{{user_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"{{user_id}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Location",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"//tests[\"myData is not empty\"] = myData.id !== null",
+							"",
+							"pm.environment.set(\"location_id\", myData.id);",
+							"pm.environment.set(\"location_cityName\", myData.cityName);",
+							"pm.environment.set(\"location_country\", myData.country);",
+							"pm.environment.set(\"location_nickname\", myData.nickname);",
+							"pm.environment.set(\"location_currentTemp\", myData.currentTemp);",
+							"pm.environment.set(\"location_minTemp\", myData.minTemp);",
+							"pm.environment.set(\"location_maxTemp\", myData.maxTemp);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"api returns location ID\"] = myData.id === pm.environment.get(\"location_id\");",
+							"tests[\"api returns city name of location\"] = pm.environment.get(\"location_cityName\") === \"Irvine\";",
+							"tests[\"api returns country code\"] = pm.environment.get(\"location_country\") === \"us\";",
+							"tests[\"api returns location's nickname\"] = pm.environment.get(\"location_nickname\") === \"soCal get away\";",
+							"tests[\"api returns a currentTemp\"] = pm.environment.get(\"location_currentTemp\") !== null;",
+							"tests[\"api returns a minTemp\"] = pm.environment.get(\"location_minTemp\") !== null;",
+							"tests[\"api returns a maxTemp\"] = pm.environment.get(\"location_maxTemp\") !== null;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cityName\": \"Irvine\", \"country\": \"us\", \"nickname\": \"soCal get away\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"location",
+						"fbeda4b0df65d1c0e5ca0673a2be58ff"
+					]
+				},
+				"description": "POST adds a location to our api. Need to send cityName and country in body. Country is a code for us, or uk etc."
+			},
+			"response": []
+		},
+		{
+			"name": "GET to check Add Location",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"//tests[\"myData is not empty\"] = myData.id !== null",
+							"",
+							"// pm.environment.set(\"location_id\", myData.id);",
+							"// pm.environment.set(\"location_cityName\", myData.cityName);",
+							"// pm.environment.set(\"location_country\", myData.country);",
+							"// pm.environment.set(\"location_currentTemp\", myData.currentTemp);",
+							"// pm.environment.set(\"location_minTemp\", myData.minTemp);",
+							"// pm.environment.set(\"location_maxTemp\", myData.maxTemp);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"api returns matching location ID\"] = myData.id === pm.environment.get(\"location_id\");",
+							"tests[\"api returns mactching city name of location\"] = pm.environment.get(\"location_cityName\") === myData.cityName;",
+							"tests[\"api returns matching country code\"] = pm.environment.get(\"location_country\") === myData.country;",
+							"tests[\"api returns matching nickname\"] = pm.environment.get(\"location_nickname\") === myData.nickname;",
+							"tests[\"api returns currentTemp\"] = pm.environment.get(\"location_currentTemp\") == myData.currentTemp;",
+							"tests[\"api return minTemp\"] = pm.environment.get(\"location_minTemp\") == myData.minTemp;",
+							"tests[\"api returns maxTemp\"] = pm.environment.get(\"location_maxTemp\") == myData.maxTemp;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cityName\": \"Irvine\", \"country\": \"us\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/{{location_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"location",
+						"fbeda4b0df65d1c0e5ca0673a2be58ff",
+						"{{location_id}}"
+					]
+				},
+				"description": "GET checks our previous POST that adds a location to our api. Ensuring the location was indeed added."
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH location tests that we can change the nickname of our location",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"tests[\"status code is 200 and PATCH was successful\"] = responseCode.code === 200;",
+							"tests[\"API changed the location nickname\"] = myData.nickname !== pm.environment.get(\"location_nickname\")",
+							"",
+							"pm.environment.set(\"location_nickname\", myData.nickname) //reset our stored nickname",
+							"",
+							"tests[\"API changed the location nickname correctly\"] = pm.environment.get(\"location_nickname\") === \"Party by the beach\""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nickname\": \"Party by the beach\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/{{location_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"location",
+						"fbeda4b0df65d1c0e5ca0673a2be58ff",
+						"{{location_id}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET to check PATCH location",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"//tests[\"myData is not empty\"] = myData.id !== null",
+							"",
+							"// pm.environment.set(\"location_id\", myData.id);",
+							"// pm.environment.set(\"location_cityName\", myData.cityName);",
+							"// pm.environment.set(\"location_country\", myData.country);",
+							"// pm.environment.set(\"location_currentTemp\", myData.currentTemp);",
+							"// pm.environment.set(\"location_minTemp\", myData.minTemp);",
+							"// pm.environment.set(\"location_maxTemp\", myData.maxTemp);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"api does not return matching location ID\"] = myData.id === pm.environment.get(\"location_id\");",
+							"tests[\"api does not return mactching city name of location\"] = pm.environment.get(\"location_cityName\") === myData.cityName;",
+							"tests[\"api does not return matching country code\"] = pm.environment.get(\"location_country\") === myData.country;",
+							"tests[\"api does not return matching nickname\"] = pm.environment.get(\"location_nickname\") === myData.nickname;",
+							"tests[\"api returns a currentTemp\"] = pm.environment.get(\"location_currentTemp\") == myData.currentTemp;",
+							"tests[\"api returns a minTemp\"] = pm.environment.get(\"location_minTemp\") == myData.minTemp;",
+							"tests[\"api returns a maxTemp\"] = pm.environment.get(\"location_maxTemp\") == myData.maxTemp;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cityName\": \"Irvine\", \"country\": \"us\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/{{location_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"location",
+						"fbeda4b0df65d1c0e5ca0673a2be58ff",
+						"{{location_id}}"
+					]
+				},
+				"description": "GET checks our previous PACTCH that changes a location nickname. Ensuring the location nickname was changed"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT replaces the location we created previously",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"api returns same location ID\"] = myData.id === pm.environment.get(\"location_id\");",
+							"tests[\"api returns new city name of location\"] = pm.environment.get(\"location_cityName\") !== myData.cityName;",
+							"tests[\"api returns country code\"] = pm.environment.get(\"location_country\") === myData.country;",
+							"tests[\"api returns location's nickname\"] = pm.environment.get(\"location_nickname\") !== myData.nickname;",
+							"// tests[\"api returns a empty currentTemp\"] = pm.environment.get(\"location_currentTemp\") === null;",
+							"// tests[\"api returns a empty minTemp\"] = pm.environment.get(\"location_minTemp\") === null;",
+							"// tests[\"api returns a empty maxTemp\"] = pm.environment.get(\"location_maxTemp\") === null;",
+							"",
+							"pm.environment.set(\"location_cityName\", myData.cityName);",
+							"pm.environment.set(\"location_country\", myData.country);",
+							"pm.environment.set(\"location_nickname\", myData.nickname);",
+							"pm.environment.set(\"location_currentTemp\", myData.currentTemp);",
+							"pm.environment.set(\"location_minTemp\", myData.minTemp);",
+							"pm.environment.set(\"location_maxTemp\", myData.maxTemp);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cityName\": \"San Diego\", \"country\": \"us\", \"nickname\": \"San Diego Paradise\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/{{location_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"location",
+						"fbeda4b0df65d1c0e5ca0673a2be58ff",
+						"{{location_id}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET to check PUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"//tests[\"myData is not empty\"] = myData.id !== null",
+							"",
+							"// pm.environment.set(\"location_id\", myData.id);",
+							"// pm.environment.set(\"location_cityName\", myData.cityName);",
+							"// pm.environment.set(\"location_country\", myData.country);",
+							"// pm.environment.set(\"location_currentTemp\", myData.currentTemp);",
+							"// pm.environment.set(\"location_minTemp\", myData.minTemp);",
+							"// pm.environment.set(\"location_maxTemp\", myData.maxTemp);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"api does not return matching location ID\"] = myData.id === pm.environment.get(\"location_id\");",
+							"tests[\"api does not return mactching city name of location\"] = pm.environment.get(\"location_cityName\") === myData.cityName;",
+							"tests[\"api does not return matching country code\"] = pm.environment.get(\"location_country\") === myData.country;",
+							"tests[\"api does not return matching nickname\"] = pm.environment.get(\"location_nickname\") === myData.nickname;",
+							"tests[\"api returns a currentTemp\"] = pm.environment.get(\"location_currentTemp\") == myData.currentTemp;",
+							"tests[\"api returns a minTemp\"] = pm.environment.get(\"location_minTemp\") == myData.minTemp;",
+							"tests[\"api returns a maxTemp\"] = pm.environment.get(\"location_maxTemp\") == myData.maxTemp;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cityName\": \"Irvine\", \"country\": \"us\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/{{location_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"location",
+						"fbeda4b0df65d1c0e5ca0673a2be58ff",
+						"{{location_id}}"
+					]
+				},
+				"description": "GET checks our previous PUT call on or location"
+			},
+			"response": []
+		},
+		{
+			"name": "POST adds a location to the authorized user's wish list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"tests[\"status code is 200 and request was ok.\"] = responseCode.code === 200;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": \"{{auth_usr1}}\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/fbeda4b0df65d1c0e5ca0673a2be58ff/watchlist/{{location_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"fbeda4b0df65d1c0e5ca0673a2be58ff",
+						"watchlist",
+						"{{location_id}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET checks that we indeed added the correct location to our user's list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"Added a location to list\"] = myData.watchList.length > pm.environment.get(\"auth_usr1_watchlist\");",
+							"",
+							"pm.environment.set(\"auth_usr1_watchlist\", myData.watchList.length);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/{{auth_usr1}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"{{auth_usr1}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Second Location",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"//tests[\"myData is not empty\"] = myData.id !== null",
+							"",
+							"pm.environment.set(\"location_id\", myData.id);",
+							"pm.environment.set(\"location_cityName\", myData.cityName);",
+							"pm.environment.set(\"location_country\", myData.country);",
+							"pm.environment.set(\"location_nickname\", myData.nickname);",
+							"pm.environment.set(\"location_currentTemp\", myData.currentTemp);",
+							"pm.environment.set(\"location_minTemp\", myData.minTemp);",
+							"pm.environment.set(\"location_maxTemp\", myData.maxTemp);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"api returns location ID\"] = myData.id === pm.environment.get(\"location_id\");",
+							"tests[\"api returns city name of location\"] = pm.environment.get(\"location_cityName\") === \"New York\";",
+							"tests[\"api returns country code\"] = pm.environment.get(\"location_country\") === \"us\";",
+							"tests[\"api returns location's nickname\"] = pm.environment.get(\"location_nickname\") === \"Bite out of the Big Apple!\";",
+							"tests[\"api returns a currentTemp\"] = pm.environment.get(\"location_currentTemp\") !== null;",
+							"tests[\"api returns a minTemp\"] = pm.environment.get(\"location_minTemp\") !== null;",
+							"tests[\"api returns a maxTemp\"] = pm.environment.get(\"location_maxTemp\") !== null;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cityName\": \"New York\", \"country\": \"us\", \"nickname\": \"Bite out of the Big Apple!\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/location/6a66e409d70296aa813d2704cc31e4c0",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"location",
+						"6a66e409d70296aa813d2704cc31e4c0"
+					]
+				},
+				"description": "POST adds a location to our api. Need to send cityName and country in body. Country is a code for us, or uk etc."
+			},
+			"response": []
+		},
+		{
+			"name": "GET to check if we gather a list of locations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"//tests[\"myData is not empty\"] = myData.id !== null",
+							"",
+							"// pm.environment.set(\"location_id\", myData.id);",
+							"// pm.environment.set(\"location_cityName\", myData.cityName);",
+							"// pm.environment.set(\"location_country\", myData.country);",
+							"// pm.environment.set(\"location_currentTemp\", myData.currentTemp);",
+							"// pm.environment.set(\"location_minTemp\", myData.minTemp);",
+							"// pm.environment.set(\"location_maxTemp\", myData.maxTemp);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"list size grew\"] = myData.length > 0"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cityName\": \"Irvine\", \"country\": \"us\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"location",
+						"fbeda4b0df65d1c0e5ca0673a2be58ff"
+					]
+				},
+				"description": "GET to check if we get a list of locations"
+			},
+			"response": []
+		},
+		{
+			"name": "POST adds a location to the second authorized user's wish list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"tests[\"status code is 200 and request was ok.\"] = responseCode.code === 200;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": \"{{auth_usr2}}\"}"
+				},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/6a66e409d70296aa813d2704cc31e4c0/watchlist/{{location_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"6a66e409d70296aa813d2704cc31e4c0",
+						"watchlist",
+						"{{location_id}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET checks that we indeed added the correct location to our second user's list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"Added a location to list\"] = myData.watchList.length > pm.environment.get(\"auth_usr2_watchlist\");",
+							"tests[\"Added the correct location to the list\"] = myData.watchList[myData.watchList.length - 1] === pm.environment.get(\"location_id\");",
+							"",
+							"pm.environment.set(\"auth_usr2_watchlist\", myData.watchList.length);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/{{auth_usr2}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"{{auth_usr2}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a single item from a user list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"status code is 200 and PATCH was successful\"] = responseCode.code === 200;",
+							"",
+							"var count = pm.environment.get(\"auth_usr1_watchlist\");",
+							"count = count - 1;",
+							"pm.environment.set(\"auth_usr1_watchlist\", count);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/fbeda4b0df65d1c0e5ca0673a2be58ff/watchlist/{{location_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"fbeda4b0df65d1c0e5ca0673a2be58ff",
+						"watchlist",
+						"{{location_id}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE an entire user list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"status code is 200 and PATCH was successful\"] = responseCode.code === 200;",
+							"pm.environment.set(\"auth_usr2_watchlist\", 0);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/{{tokenTwo}}/watchlist",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"{{tokenTwo}}",
+						"watchlist"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET checks the entire watchlist is now empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var myData = JSON.parse(responseBody);",
+							"",
+							"tests[\"status code is 200 and request was ok\"] = responseCode.code === 200;",
+							"tests[\"Removed locations from list and list is empty\"] = myData.watchList.length == 0;",
+							"",
+							"pm.environment.set(\"auth_usr2_watchlist\", myData.watchList.length);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/user/{{auth_usr2}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"user",
+						"{{auth_usr2}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE the first location we created",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"status code is 200 and delete was successful.\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/{{location_id}}",
+					"protocol": "https",
+					"host": [
+						"mm-cloud-only-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"location",
+						"fbeda4b0df65d1c0e5ca0673a2be58ff",
+						"{{location_id}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

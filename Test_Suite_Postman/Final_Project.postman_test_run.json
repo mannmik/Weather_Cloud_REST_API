@@ -1,0 +1,1890 @@
+{
+	"id": "ce19d724-4bf0-43b2-a73f-7e6114116bce",
+	"name": "Final_Project",
+	"allTests": [],
+	"timestamp": "2017-11-26T22:11:27.931Z",
+	"collection_id": "68718114-f2c3-96ce-3354-36f766fecad8",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "ca0dd84c-6d91-7706-fa55-3981ec8769b4",
+	"data": [],
+	"delay": "250",
+	"count": 1,
+	"collection": {
+		"id": "68718114-f2c3-96ce-3354-36f766fecad8",
+		"name": "Final_Project",
+		"description": "",
+		"order": [
+			"198fef5f-db35-cd25-f55a-92c3e34b9f02",
+			"3cc1fb29-d74a-2001-07e7-b3220719f2bb",
+			"59ca8171-def8-a244-5ce0-aaa6130163bb",
+			"9d0ec665-c418-d436-e49a-f09c1b600183",
+			"4e5c8f37-8933-d1af-a2cb-765b1b35551a",
+			"5eedbefd-586e-e576-d421-ad43a455361a",
+			"d7a90452-a5c5-c1de-448d-39f91869bc8c",
+			"b2e08019-eb6d-e7cf-fea6-cef06af9b3a4",
+			"67b6f7c8-21c8-2fc8-96d8-8609157c569c",
+			"e094f7b4-d35f-ad02-c4a5-8dbb2f04c2b7",
+			"1448ab95-0e38-e8c0-8da9-b4ac88ef38c1",
+			"baa6559a-b108-2958-bbec-d0dff7cb5824",
+			"c7d642d4-9b11-0ec8-ef5c-06a420cbce61",
+			"b57d316c-3ca9-df73-d859-f4329249e8d7",
+			"16bc2033-c5ed-4218-9bee-386334993f70",
+			"4dda25af-aa51-b2c2-8377-0ba22d22cea3",
+			"a6ed24eb-c4e6-2a70-9d50-3618043b7883",
+			"b6d90b95-56cc-7424-c1cf-38ab22c54411",
+			"4ce0505a-e56f-de49-290c-0f89ab5518d7",
+			"a0d22f90-e28d-a973-62f4-1fa37cc5f4b9",
+			"3ee76cb7-0b9b-a22f-bb2c-5fc5601467ae",
+			"c4997c62-96a7-04c4-b57c-cb6c702f4f9c"
+		],
+		"folders": [],
+		"folders_order": [],
+		"timestamp": 1511563528073,
+		"synced": false,
+		"remote_id": 0,
+		"owner": "2897770",
+		"sharedWithTeam": false,
+		"subscribed": false,
+		"remoteLink": "",
+		"remoteLinkUpdatedAt": null,
+		"public": false,
+		"createdAt": 1511563528073,
+		"updatedAt": 1511730202244,
+		"write": true,
+		"published": false,
+		"favorite": false,
+		"permissions": {},
+		"syncedPermissions": {}
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "Add User",
+			"id": "198fef5f-db35-cd25-f55a-92c3e34b9f02",
+			"url": "https://mm-cloud-only-api.appspot.com/user",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"api returns ID": true,
+				"api returns username": true,
+				"api returns email": true,
+				"api returns a empty watchlist": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns username": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a empty watchlist": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"304"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"api returns ID": true,
+					"api returns username": true,
+					"api returns email": true,
+					"api returns a empty watchlist": true
+				}
+			],
+			"time": "304",
+			"totalRequestTime": "304",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET to check Add User",
+			"id": "3cc1fb29-d74a-2001-07e7-b3220719f2bb",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgICZ0oUJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"api returns matching ID": true,
+				"api returns matching username": true,
+				"api returns matching email": true,
+				"api returns an empty watchlist": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching username": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns an empty watchlist": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"159"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"api returns matching ID": true,
+					"api returns matching username": true,
+					"api returns matching email": true,
+					"api returns an empty watchlist": true
+				}
+			],
+			"time": "159",
+			"totalRequestTime": "159",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET to check we return a list of user accounts",
+			"id": "59ca8171-def8-a244-5ce0-aaa6130163bb",
+			"url": "https://mm-cloud-only-api.appspot.com/user",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"api returns list of user accounts": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns list of user accounts": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"173"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"api returns list of user accounts": true
+				}
+			],
+			"time": "173",
+			"totalRequestTime": "173",
+			"iterationResults": {}
+		},
+		{
+			"name": "PATCH update a user's username",
+			"id": "9d0ec665-c418-d436-e49a-f09c1b600183",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgICZ0oUJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and Patch request was ok": true,
+				"api returns matching ID": true,
+				"api returns a new username": true,
+				"api returns matching email": true,
+				"api returns an empty watchlist": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and Patch request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a new username": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns an empty watchlist": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"163"
+			],
+			"allTests": [
+				{
+					"status code is 200 and Patch request was ok": true,
+					"api returns matching ID": true,
+					"api returns a new username": true,
+					"api returns matching email": true,
+					"api returns an empty watchlist": true
+				}
+			],
+			"time": "163",
+			"totalRequestTime": "163",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET to check PATCH",
+			"id": "4e5c8f37-8933-d1af-a2cb-765b1b35551a",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgICZ0oUJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"api returns matching ID": true,
+				"api returns matching username": true,
+				"api returns matching email": true,
+				"api returns an empty watchlist": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching username": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns an empty watchlist": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"164"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"api returns matching ID": true,
+					"api returns matching username": true,
+					"api returns matching email": true,
+					"api returns an empty watchlist": true
+				}
+			],
+			"time": "164",
+			"totalRequestTime": "164",
+			"iterationResults": {}
+		},
+		{
+			"name": "DELETE the user we created with the user_id from our first post",
+			"id": "5eedbefd-586e-e576-d421-ad43a455361a",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgICZ0oUJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and delete request was ok": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and delete request was ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"122"
+			],
+			"allTests": [
+				{
+					"status code is 200 and delete request was ok": true
+				}
+			],
+			"time": "122",
+			"totalRequestTime": "122",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add Location",
+			"id": "d7a90452-a5c5-c1de-448d-39f91869bc8c",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"api returns location ID": true,
+				"api returns city name of location": true,
+				"api returns country code": true,
+				"api returns location's nickname": true,
+				"api returns a currentTemp": true,
+				"api returns a minTemp": true,
+				"api returns a maxTemp": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns location's nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a currentTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a minTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a maxTemp": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"289"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"api returns location ID": true,
+					"api returns city name of location": true,
+					"api returns country code": true,
+					"api returns location's nickname": true,
+					"api returns a currentTemp": true,
+					"api returns a minTemp": true,
+					"api returns a maxTemp": true
+				}
+			],
+			"time": "289",
+			"totalRequestTime": "289",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET to check Add Location",
+			"id": "b2e08019-eb6d-e7cf-fea6-cef06af9b3a4",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"api returns matching location ID": true,
+				"api returns mactching city name of location": true,
+				"api returns matching country code": true,
+				"api returns matching nickname": true,
+				"api returns currentTemp": true,
+				"api return minTemp": true,
+				"api returns maxTemp": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns mactching city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns currentTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api return minTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns maxTemp": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"101"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"api returns matching location ID": true,
+					"api returns mactching city name of location": true,
+					"api returns matching country code": true,
+					"api returns matching nickname": true,
+					"api returns currentTemp": true,
+					"api return minTemp": true,
+					"api returns maxTemp": true
+				}
+			],
+			"time": "101",
+			"totalRequestTime": "101",
+			"iterationResults": {}
+		},
+		{
+			"name": "PATCH location tests that we can change the nickname of our location",
+			"id": "67b6f7c8-21c8-2fc8-96d8-8609157c569c",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and PATCH was successful": true,
+				"API changed the location nickname": true,
+				"API changed the location nickname correctly": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and PATCH was successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"API changed the location nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"API changed the location nickname correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"137"
+			],
+			"allTests": [
+				{
+					"status code is 200 and PATCH was successful": true,
+					"API changed the location nickname": true,
+					"API changed the location nickname correctly": true
+				}
+			],
+			"time": "137",
+			"totalRequestTime": "137",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET to check PATCH location",
+			"id": "e094f7b4-d35f-ad02-c4a5-8dbb2f04c2b7",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"api does not return matching location ID": true,
+				"api does not return mactching city name of location": true,
+				"api does not return matching country code": true,
+				"api does not return matching nickname": true,
+				"api returns a currentTemp": true,
+				"api returns a minTemp": true,
+				"api returns a maxTemp": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return mactching city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a currentTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a minTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a maxTemp": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"180"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"api does not return matching location ID": true,
+					"api does not return mactching city name of location": true,
+					"api does not return matching country code": true,
+					"api does not return matching nickname": true,
+					"api returns a currentTemp": true,
+					"api returns a minTemp": true,
+					"api returns a maxTemp": true
+				}
+			],
+			"time": "180",
+			"totalRequestTime": "180",
+			"iterationResults": {}
+		},
+		{
+			"name": "PUT replaces the location we created previously",
+			"id": "1448ab95-0e38-e8c0-8da9-b4ac88ef38c1",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"api returns same location ID": true,
+				"api returns new city name of location": true,
+				"api returns country code": true,
+				"api returns location's nickname": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns same location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns new city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns location's nickname": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"177"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"api returns same location ID": true,
+					"api returns new city name of location": true,
+					"api returns country code": true,
+					"api returns location's nickname": true
+				}
+			],
+			"time": "177",
+			"totalRequestTime": "177",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET to check PUT",
+			"id": "baa6559a-b108-2958-bbec-d0dff7cb5824",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"api does not return matching location ID": true,
+				"api does not return mactching city name of location": true,
+				"api does not return matching country code": true,
+				"api does not return matching nickname": true,
+				"api returns a currentTemp": true,
+				"api returns a minTemp": true,
+				"api returns a maxTemp": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return mactching city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a currentTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a minTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a maxTemp": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"152"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"api does not return matching location ID": true,
+					"api does not return mactching city name of location": true,
+					"api does not return matching country code": true,
+					"api does not return matching nickname": true,
+					"api returns a currentTemp": true,
+					"api returns a minTemp": true,
+					"api returns a maxTemp": true
+				}
+			],
+			"time": "152",
+			"totalRequestTime": "152",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST adds a location to the authorized user's wish list",
+			"id": "c7d642d4-9b11-0ec8-ef5c-06a420cbce61",
+			"url": "https://mm-cloud-only-api.appspot.com/user/fbeda4b0df65d1c0e5ca0673a2be58ff/watchlist/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok.": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"160"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok.": true
+				}
+			],
+			"time": "160",
+			"totalRequestTime": "160",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET checks that we indeed added the correct location to our user's list",
+			"id": "b57d316c-3ca9-df73-d859-f4329249e8d7",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgIDe6okKDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"Added a location to list": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Added a location to list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"142"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"Added a location to list": true
+				}
+			],
+			"time": "142",
+			"totalRequestTime": "142",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add Second Location",
+			"id": "16bc2033-c5ed-4218-9bee-386334993f70",
+			"url": "https://mm-cloud-only-api.appspot.com/location/6a66e409d70296aa813d2704cc31e4c0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"api returns location ID": true,
+				"api returns city name of location": true,
+				"api returns country code": true,
+				"api returns location's nickname": true,
+				"api returns a currentTemp": true,
+				"api returns a minTemp": true,
+				"api returns a maxTemp": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns location's nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a currentTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a minTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a maxTemp": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"253"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"api returns location ID": true,
+					"api returns city name of location": true,
+					"api returns country code": true,
+					"api returns location's nickname": true,
+					"api returns a currentTemp": true,
+					"api returns a minTemp": true,
+					"api returns a maxTemp": true
+				}
+			],
+			"time": "253",
+			"totalRequestTime": "253",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET to check if we gather a list of locations",
+			"id": "4dda25af-aa51-b2c2-8377-0ba22d22cea3",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"list size grew": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"list size grew": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"163"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"list size grew": true
+				}
+			],
+			"time": "163",
+			"totalRequestTime": "163",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST adds a location to the second authorized user's wish list",
+			"id": "a6ed24eb-c4e6-2a70-9d50-3618043b7883",
+			"url": "https://mm-cloud-only-api.appspot.com/user/6a66e409d70296aa813d2704cc31e4c0/watchlist/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok.": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"133"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok.": true
+				}
+			],
+			"time": "133",
+			"totalRequestTime": "133",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET checks that we indeed added the correct location to our second user's list",
+			"id": "b6d90b95-56cc-7424-c1cf-38ab22c54411",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgID4woQJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"Added a location to list": true,
+				"Added the correct location to the list": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Added a location to list": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Added the correct location to the list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"92"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"Added a location to list": true,
+					"Added the correct location to the list": true
+				}
+			],
+			"time": "92",
+			"totalRequestTime": "92",
+			"iterationResults": {}
+		},
+		{
+			"name": "DELETE a single item from a user list",
+			"id": "4ce0505a-e56f-de49-290c-0f89ab5518d7",
+			"url": "https://mm-cloud-only-api.appspot.com/user/fbeda4b0df65d1c0e5ca0673a2be58ff/watchlist/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and PATCH was successful": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and PATCH was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"104"
+			],
+			"allTests": [
+				{
+					"status code is 200 and PATCH was successful": true
+				}
+			],
+			"time": "104",
+			"totalRequestTime": "104",
+			"iterationResults": {}
+		},
+		{
+			"name": "DELETE an entire user list",
+			"id": "a0d22f90-e28d-a973-62f4-1fa37cc5f4b9",
+			"url": "https://mm-cloud-only-api.appspot.com/user/6a66e409d70296aa813d2704cc31e4c0/watchlist",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and PATCH was successful": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and PATCH was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"177"
+			],
+			"allTests": [
+				{
+					"status code is 200 and PATCH was successful": true
+				}
+			],
+			"time": "177",
+			"totalRequestTime": "177",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET checks the entire watchlist is now empty",
+			"id": "3ee76cb7-0b9b-a22f-bb2c-5fc5601467ae",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgID4woQJDA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and request was ok": true,
+				"Removed locations from list and list is empty": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Removed locations from list and list is empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"167"
+			],
+			"allTests": [
+				{
+					"status code is 200 and request was ok": true,
+					"Removed locations from list and list is empty": true
+				}
+			],
+			"time": "167",
+			"totalRequestTime": "167",
+			"iterationResults": {}
+		},
+		{
+			"name": "DELETE the first location we created",
+			"id": "c4997c62-96a7-04c4-b57c-cb6c702f4f9c",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"status code is 200 and delete was successful.": true
+			},
+			"testPassFailCounts": {
+				"status code is 200 and delete was successful.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"170"
+			],
+			"allTests": [
+				{
+					"status code is 200 and delete was successful.": true
+				}
+			],
+			"time": "170",
+			"totalRequestTime": "170",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 85,
+	"totalFail": 0,
+	"totalTime": 3682,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Add User",
+			"id": "198fef5f-db35-cd25-f55a-92c3e34b9f02",
+			"url": "https://mm-cloud-only-api.appspot.com/user",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns username": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a empty watchlist": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET to check Add User",
+			"id": "3cc1fb29-d74a-2001-07e7-b3220719f2bb",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgICZ0oUJDA",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching username": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns an empty watchlist": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET to check we return a list of user accounts",
+			"id": "59ca8171-def8-a244-5ce0-aaa6130163bb",
+			"url": "https://mm-cloud-only-api.appspot.com/user",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns list of user accounts": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "PATCH update a user's username",
+			"id": "9d0ec665-c418-d436-e49a-f09c1b600183",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgICZ0oUJDA",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and Patch request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a new username": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns an empty watchlist": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET to check PATCH",
+			"id": "4e5c8f37-8933-d1af-a2cb-765b1b35551a",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgICZ0oUJDA",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching username": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns an empty watchlist": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DELETE the user we created with the user_id from our first post",
+			"id": "5eedbefd-586e-e576-d421-ad43a455361a",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgICZ0oUJDA",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and delete request was ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add Location",
+			"id": "d7a90452-a5c5-c1de-448d-39f91869bc8c",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns location's nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a currentTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a minTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a maxTemp": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET to check Add Location",
+			"id": "b2e08019-eb6d-e7cf-fea6-cef06af9b3a4",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns mactching city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns matching nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns currentTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api return minTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns maxTemp": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "PATCH location tests that we can change the nickname of our location",
+			"id": "67b6f7c8-21c8-2fc8-96d8-8609157c569c",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and PATCH was successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"API changed the location nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"API changed the location nickname correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET to check PATCH location",
+			"id": "e094f7b4-d35f-ad02-c4a5-8dbb2f04c2b7",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return mactching city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a currentTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a minTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a maxTemp": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "PUT replaces the location we created previously",
+			"id": "1448ab95-0e38-e8c0-8da9-b4ac88ef38c1",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns same location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns new city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns location's nickname": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET to check PUT",
+			"id": "baa6559a-b108-2958-bbec-d0dff7cb5824",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return mactching city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api does not return matching nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a currentTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a minTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a maxTemp": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "POST adds a location to the authorized user's wish list",
+			"id": "c7d642d4-9b11-0ec8-ef5c-06a420cbce61",
+			"url": "https://mm-cloud-only-api.appspot.com/user/fbeda4b0df65d1c0e5ca0673a2be58ff/watchlist/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA7a2SCgw",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET checks that we indeed added the correct location to our user's list",
+			"id": "b57d316c-3ca9-df73-d859-f4329249e8d7",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgIDe6okKDA",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Added a location to list": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add Second Location",
+			"id": "16bc2033-c5ed-4218-9bee-386334993f70",
+			"url": "https://mm-cloud-only-api.appspot.com/location/6a66e409d70296aa813d2704cc31e4c0",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns location ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns city name of location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns country code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns location's nickname": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a currentTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a minTemp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api returns a maxTemp": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET to check if we gather a list of locations",
+			"id": "4dda25af-aa51-b2c2-8377-0ba22d22cea3",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"list size grew": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "POST adds a location to the second authorized user's wish list",
+			"id": "a6ed24eb-c4e6-2a70-9d50-3618043b7883",
+			"url": "https://mm-cloud-only-api.appspot.com/user/6a66e409d70296aa813d2704cc31e4c0/watchlist/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA2reXCgw",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET checks that we indeed added the correct location to our second user's list",
+			"id": "b6d90b95-56cc-7424-c1cf-38ab22c54411",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgID4woQJDA",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Added a location to list": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Added the correct location to the list": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DELETE a single item from a user list",
+			"id": "4ce0505a-e56f-de49-290c-0f89ab5518d7",
+			"url": "https://mm-cloud-only-api.appspot.com/user/fbeda4b0df65d1c0e5ca0673a2be58ff/watchlist/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA2reXCgw",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and PATCH was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DELETE an entire user list",
+			"id": "a0d22f90-e28d-a973-62f4-1fa37cc5f4b9",
+			"url": "https://mm-cloud-only-api.appspot.com/user/6a66e409d70296aa813d2704cc31e4c0/watchlist",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and PATCH was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GET checks the entire watchlist is now empty",
+			"id": "3ee76cb7-0b9b-a22f-bb2c-5fc5601467ae",
+			"url": "https://mm-cloud-only-api.appspot.com/user/ahNzfm1tLWNsb3VkLW9ubHktYXBpchELEgRVc2VyGICAgID4woQJDA",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and request was ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Removed locations from list and list is empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DELETE the first location we created",
+			"id": "c4997c62-96a7-04c4-b57c-cb6c702f4f9c",
+			"url": "https://mm-cloud-only-api.appspot.com/location/fbeda4b0df65d1c0e5ca0673a2be58ff/ahNzfm1tLWNsb3VkLW9ubHktYXBpchULEghMb2NhdGlvbhiAgICA2reXCgw",
+			"time": "2017-11-26T22:11:27.931Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"status code is 200 and delete was successful.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
